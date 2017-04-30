@@ -4,7 +4,7 @@ MAINTAINER Hervé Beraud <hervberaud.pro@gmail.com>
 # install requirements
 RUN apt-get update && \
     apt-get install -y gcc binutils make linux-source && \
-    apt-get install -y bison m4 patch g++
+    apt-get install -y bison m4 patch g++ gawk texinfo
 
 
 WORKDIR /bin
