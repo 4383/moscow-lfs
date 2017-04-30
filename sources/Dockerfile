@@ -28,4 +28,4 @@ RUN mkdir -pv $LFS/usr && \
 WORKDIR $LFS/sources
 
 COPY wget-list .
-RUN wget --input-file=wget-list --continue 
+RUN wget --input-file=wget-list
