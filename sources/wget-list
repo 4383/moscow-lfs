@@ -1,4 +1,4 @@
-ttp://download.savannah.gnu.org/releases/acl/acl-2.2.52.src.tar.gz
+http://download.savannah.gnu.org/releases/acl/acl-2.2.52.src.tar.gz
 http://download.savannah.gnu.org/releases/attr/attr-2.4.47.src.tar.gz
 http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.xz
 http://ftp.gnu.org/gnu/automake/automake-1.15.tar.xz
@@ -77,4 +77,3 @@ http://www.linuxfromscratch.org/patches/lfs/8.0/coreutils-8.26-i18n-1.patch
 http://www.linuxfromscratch.org/patches/lfs/8.0/glibc-2.25-fhs-1.patch
 http://www.linuxfromscratch.org/patches/lfs/8.0/kbd-2.0.4-backspace-1.patch
 http://www.linuxfromscratch.org/patches/lfs/8.0/sysvinit-2.88dsf-consolidated-1.patch
-

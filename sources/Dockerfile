@@ -28,4 +28,8 @@ RUN mkdir -pv $LFS/usr && \
 WORKDIR $LFS/sources
 
 COPY wget-list .
-RUN wget --input-file=wget-list && $?
+COPY md5sums .
+RUN wget --input-file=wget-list --continue
+RUN pushd $LFS/sources && \
+    md5sum -c md5sums && \
+    popd
