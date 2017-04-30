@@ -63,8 +63,8 @@ ENV LC_ALL=POSIX \
 
 # Chapter 5
 # Chapter 5.4
-RUN tar -xf binutils-2.26.tar.bz2 -C /tmp/ && \
-    pushd /tmp/binutils-2.26 && \
+RUN tar -xf binutils-2.27.tar.bz2 -C /tmp/ && \
+    pushd /tmp/binutils-2.27 && \
     mkdir -v build && \
     cd build && \
     ../configure \
@@ -82,12 +82,12 @@ RUN tar -xf binutils-2.26.tar.bz2 -C /tmp/ && \
     rm -rf /tmp/binutils-*
 
 # Chapter 5.5
-RUN tar -xf gcc-5.3.0.tar.bz2 -C /tmp/ && \
-    pushd /tmp/gcc-5.3.0 && \
-    tar -xf $LFS/sources/mpfr-3.1.3.tar.xz && \
-    mv -v mpfr-3.1.3 mpfr && \
-    tar -xf $LFS/sources/gmp-6.1.0.tar.xz && \
-    mv -v gmp-6.1.0 gmp && \
+RUN tar -xf gcc-6.3.0.tar.bz2 -C /tmp/ && \
+    pushd /tmp/gcc-6.3.0 && \
+    tar -xf $LFS/sources/mpfr-3.1.5.tar.xz && \
+    mv -v mpfr-3.1.5 mpfr && \
+    tar -xf $LFS/sources/gmp-6.1.2.tar.xz && \
+    mv -v gmp-6.1.2 gmp && \
     tar -xf $LFS/sources/mpc-1.0.3.tar.gz && \
     mv -v mpc-1.0.3 mpc && \
     for file in $(find gcc/config -name linux64.h -o -name linux.h -o -name sysv4.h); do \
