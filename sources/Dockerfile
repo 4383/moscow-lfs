@@ -13,6 +13,8 @@ RUN rm sh && \
 
 # prepare environment
 COPY version-check.sh .
+COPY library-check.sh .
 
 # check environment
 RUN bash version-check.sh
+RUN bash library-check.sh
