@@ -21,7 +21,8 @@ RUN bash library-check.sh
 
 ENV LFS=/mnt/lfs
 
-RUN mkdir -pv $LFS/{usr, sources} && \
+RUN mkdir -pv $LFS/usr && \
+    mkdir -pv $LFS/sources && \
     chmod -v a+wt $LFS/sources
 
 WORKDIR $LFS/sources
