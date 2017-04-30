@@ -46,7 +46,7 @@ RUN mkdir -v $LFS/tools && \
     ln -sv $LFS/tools /
 
 # Chapter 4.3
-RUN groupadd lfs
+RUN groupadd lfs &&\
     useradd -s /bin/bash -g lfs -m -k /dev/null lfs && \
     echo "lfs:lfs" | chpasswd && \
     chown -v lfs $LFS/tools && \
