@@ -6,7 +6,7 @@ A minimal Linux From Scratch (LFS) distribution built-in docker container
 
 ### from docker hub
 ```shell
-$ docker run 4383/moscow
+$ docker run 4383/moscow tar -cJf - -C /mnt/lfs . > lfs.tar.xz
 ```
 ### from sources
 ```shell

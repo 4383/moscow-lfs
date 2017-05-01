@@ -54,8 +54,8 @@ RUN groupadd lfs &&\
 USER lfs
 
 # Chapter 4.4
-COPY .bash_profile .
-COPY .bashrc .
+COPY .bash_profile /home/lfs/
+COPY .bashrc /home/lfs/
 ENV LC_ALL=POSIX \
     LFS_TGT=x86_64-lfs-linux-gnu \
     PATH=/tools/bin:/bin:/usr/bin \
