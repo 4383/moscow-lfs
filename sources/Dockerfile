@@ -94,7 +94,7 @@ RUN tar -xf gcc-6.3.0.tar.bz2 -C /tmp/ && \
       cp -uv $file{,.orig}; \
       sed -e 's@/lib\(64\)\?\(32\)\?/ld@/tools&@g' \
           -e 's@/usr@/tools@g' $file.orig > $file; \
-      echo "\n#undef STANDARD_STARTFILE_PREFIX_1\n#undef STANDARD_STARTFILE_PREFIX_2\n#define STANDARD_STARTFILE_PREFIX_1 \"/tools/lib/\"\n#define STANDARD_STARTFILE_PREFIX_2 \"\"" >> $file; \
+      echo '\n#undef STANDARD_STARTFILE_PREFIX_1\n#undef STANDARD_STARTFILE_PREFIX_2\n#define STANDARD_STARTFILE_PREFIX_1 "/tools/lib/"\n#define STANDARD_STARTFILE_PREFIX_2 ""' >> $file; \
       touch $file.orig; \
     done && \
     mkdir -v build && \
