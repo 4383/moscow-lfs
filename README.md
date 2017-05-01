@@ -21,7 +21,6 @@ $ docker build -t moscow .
 ## build your own docker container based on your lfs
 ```yaml
 FROM scratch
-
 COPY lfs.tar.xz .
 CMD /bin/bash
 ```

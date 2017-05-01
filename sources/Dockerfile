@@ -90,17 +90,12 @@ RUN tar -xf gcc-6.3.0.tar.bz2 -C /tmp/ && \
     mv -v gmp-6.1.2 gmp && \
     tar -xf $LFS/sources/mpc-1.0.3.tar.gz && \
     mv -v mpc-1.0.3 mpc && \
-    for file in gcc/config/{linux,i386/linux{,64}}.h \
-    do \
-      cp -uv $file{,.orig} \
+    for file in gcc/config/{linux,i386/linux{,64}}.h; do \
+      cp -uv $file{,.orig}; \
       sed -e 's@/lib\(64\)\?\(32\)\?/ld@/tools&@g' \
-          -e 's@/usr@/tools@g' $file.orig > $file \
-      echo ' \
-    #undef STANDARD_STARTFILE_PREFIX_1 \
-    #undef STANDARD_STARTFILE_PREFIX_2 \
-    #define STANDARD_STARTFILE_PREFIX_1 "/tools/lib/" \
-    #define STANDARD_STARTFILE_PREFIX_2 ""' >> $file \
-      touch $file.orig \
+          -e 's@/usr@/tools@g' $file.orig > $file; \
+      echo "\n#undef STANDARD_STARTFILE_PREFIX_1\n#undef STANDARD_STARTFILE_PREFIX_2\n#define STANDARD_STARTFILE_PREFIX_1 \"/tools/lib/\"\n#define STANDARD_STARTFILE_PREFIX_2 \"\"" >> $file; \
+      touch $file.orig; \
     done && \
     mkdir -v build && \
     cd build && \
