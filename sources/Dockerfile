@@ -112,8 +112,7 @@ RUN tar -xf gcc-6.3.0.tar.bz2 -C /tmp/ && \
         --disable-multilib \
         --disable-decimal-float \
         --disable-threads \
-        --disable-
-    libatomic \
+        --disable-libatomic \
         --disable-libgomp \
         --disable-libquadmath \
         --disable-libssp \
