@@ -17,8 +17,7 @@ $ cp lfs.tar.xz my-lfs-based-container/
 $ cd my-lfs-based-container
 $ cat > Dockerfile << "EOF"
 FROM scratch
-COPY lfs.tar.xz .
-CMD /bin/bash
+ADD lfs.tar.xz .
 EOF
 $ docker build -t mylfs .
 $ docker exec -i -t mylfs /bin/bash
@@ -38,8 +37,7 @@ $ cp lfs.tar.xz my-lfs-based-container/
 $ cd my-lfs-based-container
 $ cat > Dockerfile << "EOF"
 FROM scratch
-COPY lfs.tar.xz .
-CMD /bin/bash
+ADD lfs.tar.xz .
 EOF
 $ docker build -t mylfs .
 $ docker exec -i -t mylfs /bin/bash
