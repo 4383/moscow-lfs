@@ -80,7 +80,11 @@ RUN tar -xf binutils-2.27.tar.bz2 -C /tmp/ && \
     make install && \
     popd && \
     rm -rf /tmp/binutils-*
-
+RUN echo $LFS
+RUN echo $LFS_TGT
+RUN ls -la $LFS
+RUN pwd
+RUN ls
 # Chapter 5.5
 RUN tar -xf gcc-6.3.0.tar.bz2 -C /tmp/ && \
     pushd /tmp/gcc-6.3.0 && \
