@@ -3,7 +3,8 @@
 
 A minimal Linux From Scratch (LFS) distribution built-in docker container
 
-[Project page](https://github.com/4383/moscow)
+[Project documentation (latest release)](http://moscow.readthedocs.io/en/latest/)
+[Project documentation (development version)](http://moscow.readthedocs.io/en/develop/)
 
 ## usage
 ### from docker hub
